@@ -1,0 +1,15 @@
+Bash ou python pour le script de scrapping
+Postgre ou Sqlite3 pour la BDD
+
+https://readi.fi/sitemap.xml
+
+-> Récupérer les urls qui commencent par https://readi.fi/asset
+	- Combien de liens différents?
+-> Aller sur les URLs
+-> Mettre en BDD le contenu de :
+	- La balise title
+	- Le contenu de la balise meta name="description"
+-> Quels sont les programmes nécessaires? curl? wget?
+-> Commandes utiles?
+
+libpq-dev postgresql postgresql-contrib
