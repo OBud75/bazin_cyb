@@ -26,6 +26,7 @@ s6 = 1 or 1 or 1 and 1 or 1 or (1 or 0)
 = 				1
 = 1 or 1 or 1 or 1 or 1
 = 1 
+
 '''
 
 print(s1,s2,s3,s4,s5,s6)
