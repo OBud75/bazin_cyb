@@ -58,4 +58,17 @@ case $choose_option in
 	rm $file_to_delete
 	echo "Le fichier a été supprimé."
 	;;
+
+ 	4)
+	echo "Quels sont les fichiers à supprimer ?"
+	read -r -a files_to_delete
+	for file in "${files_to_delete[@]}"; do
+        	if [ -e "$file" ]; then
+            		rm "$file"
+            		echo "Fichier supprimé : $file"
+        	else
+            		echo "Fichier non trouvé : $file"
+        	fi
+    	done
+	;;
 esac
