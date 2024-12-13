@@ -71,4 +71,16 @@ case $choose_option in
         	fi
     	done
 	;;
+
+	5)
+	echo "Quel fichier voulez-vous déplacer ?"
+	read -r file_to_move
+	echo "Où voulez-vous le déplacer ?"
+	read -r directory_to_move
+	mv $file_to_move $directory_to_move
+	echo "Le fichier "$file_to_move"a bien été déplacé ici: "$directory_to_move
+	;;
+
+	6)
+	
 esac
