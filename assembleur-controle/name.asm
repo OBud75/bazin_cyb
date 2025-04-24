@@ -41,3 +41,5 @@ _start:
     mov eax, 1
     mov ebx, 0
     int 0x80
+
+; Vous pouvez créer des fonctions (read_input, quit ...)

@@ -29,3 +29,11 @@ while IFS= read -r url; do
 done < Scrap.txt
 
 echo "Données insérées dans db.sqlite3."
+
+# Le fait de concaténer directement les variables dans la commande sqlite3 peut poser des problèmes de sécurité (injection SQL).
+# Typiquement si $title est égal à 
+# "toto'); DROP TABLE title; --"
+# la commande exécutée sera :
+# "INSERT INTO title (url, title) VALUES ('url', 'toto'); DROP TABLE title; --');"
+# Pour éviter cela, il est préférable d'utiliser des paramètres liés dans SQLite.
+# sqlite3 db.sqlite3 "INSERT INTO title (url, title) VALUES (?, ?);" "$url" "$title"
